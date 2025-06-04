@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>СИБИНТЕК - Обеспечивая лидерство</title>
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/pipka.css' %}">
 </head>
 <body>
     <header class="header">
@@ -59,6 +60,14 @@
                     </svg>
                     <h2></h2>
                 </div>
+                <div class="slider">
+                      <button class="prev">Назад</button>
+                      <img width=150 src="{% static 'images/photos/1.jpg' %}">
+                      <img width=150 src="{% static 'images/photos/2.jpg' %}">
+                      <img width=150 src="{% static 'images/photos/3.jpg' %}">
+                      <button class="next">Вперед</button>
+                </div>
+                <script src='{% static 'scripts/script.js' %}'></script>
                 <div class="card-button">
                     <a class="btn" href="">Как мы работаем</a>
                 </div>
