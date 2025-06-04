@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -7,80 +8,235 @@
     <title>СИБИНТЕК - Обеспечивая лидерство</title>
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
-
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">СИБИНТЕК</div>
-            <div class="slogan">ОБЕСПЕЧИВАЯ ЛИДЕРСТВО</div>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo-box">
+                    <div class="logo-text">///</div>
+                </div>
+                <div class="company-info">
+                    <div class="company-name">СИБИНТЕК</div>
+                    <div class="company-tagline">ОБЕСПЕЧИВАЯ ЛИДЕРСТВО</div>
+                </div>
+            </div>
+            <div class="mgu-badge">
+                <div class="mgu-text">МГУ</div>
+            </div>
         </div>
     </header>
 
-    <div class="container">
-        <h1>ИСПОЛЬЗОВАНИЕ ВИРТУАЛЬНЫХ ОБРАЗОВ В ЦЕЛЯХ АНАЛИЗА ЗАЩИЩЁННОСТИ СИСТЕМ ПРОМЫШЛЕННОЙ АВТОМАТИЗАЦИИ</h1>
-
-        <div class="section">
-            <h2>ИЗУЧИТЕ</h2>
-            <ul>
-                <li>Процессы резервного копирования.</li>
-                <li>Технологии виртуализации.</li>
-                <li>Основы активного тестирования и проведения проверок информационной безопасности</li>
-                <li>Инструменты активного тестирования защищённости</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>ПОДВЕДИТЕ ИТОГИ</h2>
-            <ul>
-                <li>Разработаете методику анализа защищённости с использованием виртуальных образов</li>
-                <li>Сформируете отчёты об анализе защищённости.</li>
-                <li>Оформите итоги работ по проекту.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>ПОУЧАСТВУЙТЕ В</h2>
-            <ul>
-                <li>Апробировании восстановления ОС разных версий.</li>
-                <li>Формировании перечня проверок, возможных с использованием виртуальных образов</li>
-                <li>Подборе инструментов для реализации перечня проверок.</li>
-                <li>Применении на восстановленных виртуальных образах инструментов.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>ПОЛУЧИТЕ НАВЫКИ</h2>
-            <ul>
-                <li>Основы информационной безопасности</li>
-                <li>Проведение резервного копирования.</li>
-                <li>Понимание технологий виртуализации.</li>
-                <li>Проведение анализа уязвимостей.</li>
-                <li>Проведение активного тестирования защищённости</li>
-                <li>Формирование методик и отчётности по</li>
-            </ul>
-        </div>
-
-        <div class="team">
-            <div class="team-member">
-                <strong>Максимов Антон Сергеевич,</strong>
-                <p>Руководитель проекта. Главный специалист отдела ИБ АСУ ТП, ООО ИК «СИБИНТЕК».</p>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <!-- Left Side - Industrial Image and Dots -->
+            <div class="hero-left">
+                <div class="industrial-placeholder">
+                    <img src="/media/media/images/factory.png" alt="">
+                </div>
+                <!-- Dot Pattern -->
+                <div class="dot-grid">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
             </div>
 
-            <div class="team-member">
-                <strong>Богатырёв Михаил Валерьевич,</strong>
-                <p>Главный менеджер отдела ИБ АСУ ТП, ООО ИК «СИБИНТЕК».</p>
-            </div>
-
-            <div class="team-member">
-                <strong>Гуревич Алексей Юрьевич,</strong>
-                <p>Заместитель начальника управления развития и контроля ИБ, Ответственный от ООО ИК «СИБИНТЕК».</p>
+            <!-- Right Side - Main Title -->
+            <div class="hero-right">
+                <div class="hero-circle">
+                    <div class="title-card">
+                        <div class="title-content">
+                            <div class="title-icon">
+                                <div class="icon-text">Я</div>
+                            </div>
+                            <div class="title-text">
+                                <h1>ИСПОЛЬЗОВАНИЕ ВИРТУАЛЬНЫХ ОБРАЗОВ В ЦЕЛЯХ АНАЛИЗА ЗАЩИЩЁННОСТИ СИСТЕМ ПРОМЫШЛЕННОЙ АВТОМАТИЗАЦИИ</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Decorative droplet -->
+                <div class="decorative-droplet"></div>
             </div>
         </div>
-    </div>
 
-    <footer>
-        <div class="container">
-            <p>© 2023 ООО ИК «СИБИНТЕК». Все права защищены.</p>
+        <!-- Content Sections -->
+        <div class="content-grid">
+            <!-- Study Section -->
+            <div class="content-card">
+                <div class="card-header">
+                    <svg class="card-icon" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                    </svg>
+                    <h2>ИЗУЧИТЕ</h2>
+                </div>
+                <ul class="card-list">
+                    <li class="list-item">
+                        <span class="bullet"></span>
+                        <span>Процессы резервного копирования.</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="bullet"></span>
+                        <span>Технологии виртуализации.</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="bullet"></span>
+                        <span>Основы активного тестирования и проведения проверок информационной безопасности</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="bullet"></span>
+                        <span>Инструменты активного тестирования защищённости</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Participate Section -->
+            <div class="content-card">
+                <div class="card-header">
+                    <svg class="card-icon" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                    </svg>
+                    <h2>ПОУЧАСТВУЙТЕ В</h2>
+                </div>
+                <ul class="card-list">
+                    <li class="list-item">
+                        <span class="bullet"></span>
+                        <span>Апробировании восстановления ОС разных версий.</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="bullet"></span>
+                        <span>Формировании перечня проверок, возможных с использованием виртуальных образов</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="bullet"></span>
+                        <span>Подборе инструментов для реализации перечня проверок.</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="bullet"></span>
+                        <span>Применении на восстановленных виртуальных образах инструментов.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Results Section -->
+            <div class="content-card">
+                <div class="card-header">
+                    <svg class="card-icon" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"/>
+                    </svg>
+                    <h2>ПОДВЕДИТЕ ИТОГИ</h2>
+                </div>
+                <ul class="card-list">
+                    <li class="list-item">
+                        <span class="bullet"></span>
+                        <span>Разработаете методику анализа защищённости с использованием виртуальных образов</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="bullet"></span>
+                        <span>Сформируете отчёты об анализе защищённости.</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="bullet"></span>
+                        <span>Оформите итоги работ по проекту.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="content-card">
+                <div class="card-header">
+                    <svg class="card-icon" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                        <path d="M6.5 2H20V22H6.5A2.5 2.5 0 0 1 4 19.5V4.5A2.5 2.5 0 0 1 6.5 2Z"/>
+                    </svg>
+                    <h2>ПОЛУЧИТЕ НАВЫКИ</h2>
+                </div>
+                <ul class="card-list">
+                    <li class="list-item">
+                        <span class="bullet"></span>
+                        <span>Основы информационной безопасности</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="bullet"></span>
+                        <span>Проведение резервного копирования.</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="bullet"></span>
+                        <span>Понимание технологий виртуализации.</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="bullet"></span>
+                        <span>Проведение анализа уязвимостей.</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="bullet"></span>
+                        <span>Проведение активного тестирования защищённости</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="bullet"></span>
+                        <span>Формирование методик и отчётности по информационной безопасности.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Максимов Антон Сергеевич,</h3>
+                <p>
+                    Руководитель проекта<br>
+                    Старший научный сотрудник ИВ АСУ ТП<br>
+                    ООО «ИК «СИБИНТЕК»
+                </p>
+            </div>
+            <div class="footer-column">
+                <h3>Богатырёв Михаил Валерьевич,</h3>
+                <p>
+                    Зам. руководителя ИВ АСУ ТП<br>
+                    ООО «ИК «СИБИНТЕК»
+                </p>
+            </div>
+            <div class="footer-column">
+                <h3>Гуревич Алексей Юрьевич,</h3>
+                <p>
+                    Доцент кафедры вычислительных методов<br>
+                    и компьютерного моделирования<br>
+                    Факультета Вычислительной математики<br>
+                    и кибернетики МГУ имени М.В. Ломоносова<br>
+                    Ответственный от ООО «ИК «СИБИНТЕК»
+                </p>
+            </div>
         </div>
     </footer>
 </body>
