@@ -179,6 +179,10 @@ body {
     background-color: white;
     padding: 32px;
     border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* если карточки одинаковой высоты */
 }
 
 .card-header {
@@ -313,4 +317,11 @@ body {
     .title-text h1 {
         font-size: 14px;
     }
+}
+.card-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto; /* прижимает кнопку вниз */
+    padding-top: 16px;
 }
