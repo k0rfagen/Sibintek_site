@@ -187,8 +187,9 @@ body {
 
 .card-header {
     display: flex;
-    align-items: center;
-    gap: 12px;
+    flex-direction: column; /* делаем вертикальным, если нужно только h2 */
+    align-items: center;     /* центрируем по горизонтали */
+    text-align: center;      /* текст тоже будет по центру */
     margin-bottom: 24px;
 }
 
@@ -324,4 +325,9 @@ body {
     align-items: center;
     margin-top: auto; /* прижимает кнопку вниз */
     padding-top: 16px;
+}
+.title-icon-text {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* расстояние между иконкой и текстом */
 }
