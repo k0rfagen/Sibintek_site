@@ -8,11 +8,11 @@ from main import views
 
 
 urlpatterns = [
-    path('', include('main.urls')),
-    path('1.html', views.documentation_page1, name='doc_page')
-    path('2.html', views.documentation_page2, name='doc_page')
-    path('3.html', views.documentation_page3, name='doc_page')
-    path('crew.html', views.crew, name='doc_page')
+    path("", include("main.urls")),
+    path("doc1", views.documentation_page1, name="doc_page"),
+    path("doc2", views.documentation_page2, name="doc_page"),
+    path("doc3", views.documentation_page3, name="doc_page"),
+    path("crew", views.crew, name="doc_page"),
 ]
 
 if settings.DEBUG:
