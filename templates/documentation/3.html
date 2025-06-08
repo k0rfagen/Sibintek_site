@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Что в процессе?</title>
+  <style>
+    /* Цветовая переменная для удобства изменения темы */
+    :root {
+        --theme-color: #fbb207;
+        --theme-hover: #fbb207;
+    }
+
+    /* Если захотите переключить на зеленую тему — раскомментируйте эту строку */
+    /* :root { --theme-color: #27ae60; --theme-hover: #219150; } */
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 40px;
+    }
+
+    .section {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+
+    .accordion {
+      background-color: var(--theme-color);
+      color: white;
+      cursor: pointer;
+      padding: 15px 20px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      font-size: 18px;
+      font-weight: bold;
+      outline: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .accordion:hover {
+      background-color: var(--theme-hover);
+    }
+
+    .panel {
+      display: none;
+      padding: 15px 25px;
+      background-color: #ecf0f1;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Что в процессе?</h1>
+
+<div class="section">
+  <button class="accordion">1. Переход на целевые инструменты</button>
+  <div class="panel">
+    <p>Переходим на ПО корпоративного уровня, чтобы максимально приблизить условия нашей работы к тем, в которых функционируют передовые компании.</p>
+  </div>
+</div>
+
+<div class="section">
+  <button class="accordion">2. Углубление знаний в сфере</button>
+  <div class="panel">
+    <p>Наша команда регулярно сталкивается с новыми задачами и проблемами в области информационной безопасности. Чтобы понимать, что мы делаем и как избежать повторяющихся ошибок, мы постоянно углубляемся в темы, входящие в область знаний проекта.</p>
+  </div>
+</div>
+
+<div class="section">
+  <button class="accordion">3. Тестирование новых средств</button>
+  <div class="panel">
+    <p>С постановкой новых задач и изучением актуальных тем в ИТ и ИБ возникает потребность в использовании и освоении нового программного обеспечения. Мы часто занимаемся его установкой и тестированием.</p>
+  </div>
+</div>
+
+<div class="section">
+  <button class="accordion">4. Выстраивание процесса</button>
+  <div class="panel">
+    <p>Разрабатываем устойчивый процесс создания виртуальных лабораторий на основе резервных копий и образов реальных систем. Это позволяет нам анализировать сильные и слабые стороны компонентов без риска для рабочих систем.</p>
+  </div>
+</div>
+
+<div class="section">
+  <button class="accordion">5. Ведение документации</button>
+  <div class="panel">
+    <p>Для последовательного и взаимосвязанного изучения новых тем важно грамотно выстраивать процесс работы и вести чёткую документацию. Она помогает подводить итоги, структурировать материал, воспроизводить алгоритмы и тиражировать успешные практики.</p>
+  </div>
+</div>
+
+<script>
+  const acc = document.querySelectorAll(".accordion");
+  acc.forEach(button => {
+    button.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

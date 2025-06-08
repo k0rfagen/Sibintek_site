@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Что мы изучили?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333333;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    .section {
+      background-color: #fff;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .accordion {
+      background-color: #fbb207;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      transition: background-color 0.3s;
+      font-weight: bold;
+    }
+
+    .accordion:hover {
+      background-color: #f4b006;
+    }
+
+    .panel {
+      padding: 15px;
+      display: none;
+      background-color: #ecf0f1;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Что мы изучили?</h1>
+
+<div class="section">
+  <button class="accordion">1. Основы сетей</button>
+  <div class="panel">
+    <h3>Модели сетей</h3>
+    <ul>
+      <li><strong>ISO/OSI:</strong> 7 уровней (физический, канальный, сетевой, транспортный, сеансовый, уровень представления, прикладной) — редко используется на практике.</li>
+      <li><strong>TCP/IP:</strong> реальная модель, 4 уровня:
+        <ul>
+          <li><strong>Канальный (Ethernet)</strong> — передача данных по проводам или Wi-Fi.</li>
+          <li><strong>Сетевой (IP)</strong> — отвечает за адресацию (как почтовые индексы).</li>
+          <li><strong>Транспортный (TCP/UDP)</strong> — гарантирует доставку данных.</li>
+          <li><strong>Прикладной (HTTP, FTP)</strong> — сайты, почта, мессенджеры.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>Адреса в сети</h3>
+    <ul>
+      <li><strong>MAC-адрес:</strong> уникальный серийный номер устройства.</li>
+      <li><strong>IP-адрес:</strong> например, <code>192.168.1.1</code>.</li>
+      <li><strong>Порт:</strong> как номер квартиры в доме, например, <code>80</code> для сайтов.</li>
+    </ul>
+
+    <h3>TCP — надёжная доставка</h3>
+    <p>Работает через трёхстороннее рукопожатие:</p>
+    <ol>
+      <li>Компьютер A: "Привет, давай общаться?" (<code>SYN</code>)</li>
+      <li>Компьютер B: "ОК, готов!" (<code>SYN-ACK</code>)</li>
+      <li>Компьютер A: "Супер, начинаю!" (<code>ACK</code>)</li>
+    </ol>
+    <p>Если данные теряются — TCP отправляет их повторно.</p>
+
+    <h3>NAT — "общий интернет"</h3>
+    <p>Позволяет нескольким устройствам использовать один внешний IP-адрес.</p>
+    <ul>
+      <li><strong>Пример:</strong> Телефон (<code>192.168.1.2</code>) → Роутер (<code>88.8.8.8</code>) → Интернет</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section">
+  <button class="accordion">2. Основы классификации уязвимостей</button>
+  <div class="panel">
+    <ul>
+      <li><strong>CVE</strong> — база данных известных уязвимостей.</li>
+      <li><strong>CVSS</strong> — стандарт оценки опасности уязвимостей.</li>
+      <li><strong>CWE</strong> — перечень типовых ошибок в коде.</li>
+      <li><strong>Сканирование</strong> — поиск слабых мест в системах.</li>
+      <li><strong>Банк данных угроз</strong> — хранение информации о возможных атаках.</li>
+      <li><strong>Поиск уязвимостей</strong> — активное выявление проблем.</li>
+      <li><strong>Причины возникновения уязвимостей:</strong>
+        <ul>
+          <li>Ошибки дизайна</li>
+          <li>Ошибки в коде</li>
+          <li>Неправильные настройки конфигурации</li>
+          <li>Человеческий фактор</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="section">
+  <button class="accordion">3. Теория по ОС</button>
+  <div class="panel">
+    <ul>
+      <li><strong>Виртуальная память:</strong> программы работают с виртуальными адресами, ОС переводит их в физические.</li>
+      <li><strong>Кэш-память:</strong> быстрый доступ к данным процессора:
+        <ul>
+          <li>L0 — самая быстрая</li>
+          <li>L1, L2 — чуть медленнее</li>
+        </ul>
+      </li>
+      <li><strong>Прерывания:</strong> сигналы, прерывающие выполнение задач.</li>
+      <li><strong>Процессы:</strong> программы со своими инструкциями и памятью. Если два процесса одинаковые, данные копируются только при изменении (Copy-on-Write).</li>
+      <li><strong>Файловая система:</strong>
+        <ul>
+          <li>Inode — информация о файле (размер, права, расположение)</li>
+          <li>Buffer cache — ускоряет доступ к часто используемым данным</li>
+        </ul>
+      </li>
+      <li><strong>Обработка ошибок:</strong> ОС следит за состоянием системы и останавливает неполадки.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section">
+  <button class="accordion">4. Организация ИБ</button>
+  <div class="panel">
+    <ul>
+      <li><strong>Red team:</strong> атакующие (Black box / White box)</li>
+      <li><strong>Blue team:</strong> защитники (SOC — центр мониторинга)</li>
+      <li><strong>Yellow team:</strong> эксперты по архитектуре и политикам безопасности</li>
+      <li><strong>Purple team:</strong> совместная работа Red + Blue</li>
+      <li><strong>Green team:</strong> Yellow + Blue — оптимизация защиты</li>
+      <li><strong>Orange team:</strong> Red + Yellow — создают целевые сценарии атак</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section">
+  <button class="accordion">5. Основы средств ИБ</button>
+  <div class="panel">
+    <ul>
+      <li><strong>Угрозы:</strong>
+        <ul>
+          <li><strong>Фишинг:</strong> обманные письма/сайты для кражи паролей</li>
+          <li><strong>DDoS-атаки:</strong> перегрузка сервера большим количеством запросов</li>
+        </ul>
+      </li>
+      <li><strong>Средства защиты:</strong>
+        <ul>
+          <li><strong>Межсетевые экраны:</strong> фильтруют входящий и исходящий трафик</li>
+          <li><strong>Сканирование:</strong> ScanOval, ScamSAS, OpenSAS</li>
+        </ul>
+      </li>
+      <li><strong>Резервные копии:</strong> Cyber Backup</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  const acc = document.querySelectorAll(".accordion");
+  acc.forEach(button => {
+    button.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

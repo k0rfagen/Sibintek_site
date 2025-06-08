@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Что мы сделали?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 40px;
+    }
+
+    .section {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+
+    .accordion {
+      background-color: #fbb207;
+      color: white;
+      cursor: pointer;
+      padding: 15px 20px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      font-size: 18px;
+      font-weight: bold;
+      outline: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .accordion:hover {
+      background-color: #2980b9;
+    }
+
+    .panel {
+      display: none;
+      padding: 15px 25px;
+      background-color: #ecf0f1;
+      font-size: 16px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Что мы сделали?</h1>
+
+<div class="section">
+  <button class="accordion">1. Построили виртуальную лабораторию</button>
+  <div class="panel">
+    <ul>
+      <li><strong>Принцип визуализации:</strong> использовали VirtualBox для создания изолированных виртуальных машин.</li>
+      <li><strong>Работа с ОС:</strong> Kali Linux, Windows, Alt Linux, Astra Linux.</li>
+      <li><strong>Работа с командной строкой:</strong> освоили базовые команды.</li>
+      <li><strong>Настройка межсетевого экрана:</strong> программный комплекс, который отслеживает сетевые пакеты, блокирует или разрешает их прохождение.</li>
+      <li><strong>Настройка сети:</strong>
+        <ul>
+          <li><strong>NAT:</strong> доступ к интернету</li>
+          <li><strong>Сетевой мост:</strong> в одной сети с хостом</li>
+          <li><strong>Внутренняя сеть:</strong> изолированное тестирование</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="section">
+  <button class="accordion">2. Провели сканирование на уязвимости</button>
+  <div class="panel">
+    <ul>
+      <li><strong>Wireshark:</strong> анализ сетевого трафика.</li>
+      <li><strong>nmap:</strong> сканирование сети.</li>
+      <li><strong>Использовали:</strong> ScanOval, ScamSAS, OpenSAS.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section">
+  <button class="accordion">3. Эксплуатировали базовые уязвимости</button>
+  <div class="panel">
+    <ul>
+      <li><strong>Backdoor:</strong> вредоносная программа для получения доступа к системе с обходом аутентификации.</li>
+      <li><strong>ARP-Spoofing:</strong> протокол, позволяющий определить MAC-адрес по известному IP-адресу.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section">
+  <button class="accordion">4. Сделали резервную копию</button>
+  <div class="panel">
+    <p>С помощью <code>Cyber Backup</code> создали первую резервную копию системы.</p>
+  </div>
+</div>
+
+<script>
+  const acc = document.querySelectorAll(".accordion");
+  acc.forEach(button => {
+    button.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
