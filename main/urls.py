@@ -22,6 +22,7 @@ urlpatterns = [
     path("doc2", views.documentation_page2, name="doc_page2"),
     path("doc3", views.documentation_page3, name="doc_page3"),
     path("crew", views.crew, name="crew_page"),
+    
 ]
 
 if settings.DEBUG:

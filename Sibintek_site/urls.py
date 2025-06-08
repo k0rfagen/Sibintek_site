@@ -16,5 +16,5 @@ urlpatterns = [
     path("documentation/2.html", documentation_page2, name="page_2"),
     path("documentation/3.html", documentation_page3, name="page_3"),
     path("crew.html", crew, name="crew"),
-    path("documentation/scaners.html", scaners, name="scaners"),  # маршрут из локальной версии
+    path("documentation/scaners.html", scaners, name="scaners"),
 ]
