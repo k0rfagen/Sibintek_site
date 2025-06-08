@@ -7,7 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>СИБИНТЕК - Обеспечивая лидерство</title>
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    <link rel="stylesheet" href="{% static 'css/pipka.css' %}">
+    <style>
+        .slider {
+            width: 300px; /* Фиксированная ширина слайдера */
+            overflow: hidden; /* Обрезаем всё, что выходит за границы контейнера */
+            position: relative; /* Необходимо для правильного позиционирования кнопок */
+        }
+
+        /* Контейнер всех слайдов */
+        .slides {
+            display: flex; /* Размещаем слайды в одну линию */
+            transition: transform 0.5s ease-in-out; /* Анимация плавного смещения */
+        }
+
+        /* Каждый отдельный слайд */
+        .slide {
+            width: 100%; /* Занимает всю ширину контейнера */
+            flex-shrink: 0; /* Запрещаем уменьшение размера слайдов */
+        }
+
+        /* Стили для изображений */
+        .slide img {
+            width: 100%; /* Картинки растягиваются на весь слайд */
+            display: block; /* Убираем пробелы вокруг изображений */
+        }
+
+        /* Кнопки «Назад» и «Вперёд» */
+        .prev, .next {
+            position: absolute; /* Позволяет располагать кнопки поверх слайдов */
+            top: 50%; /* Размещаем по вертикали по центру */
+            transform: translateY(-50%); /* Сдвигаем кнопки вверх на половину их высоты */
+            background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон кнопок */
+            color: white; /* Белый цвет текста */
+            border: none; /* Убираем границы */
+            padding: 10px; /* Отступы внутри кнопки */
+            cursor: pointer; /* Изменяем курсор на указатель */
+            font-size: 18px; /* Размер шрифта */
+            font-weight: bold; /* Делаем текст жирным */
+            z-index: 2; /* Размещаем кнопки выше всех элементов */
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -66,21 +113,63 @@
                     <h2></h2>
                 </div>
                 <div class="slider">
-                      <button class="prev">Назад</button>
-                      <div class="slides">
-                        <img src="{% static 'images/photos/1.jpg' %}" width="150">
-                        <img src="{% static 'images/photos/2.jpg' %}" width="150">
-                        <img src="{% static 'images/photos/3.jpg' %}" width="150">
-                        <img src="{% static 'images/photos/4.jpg' %}" width="150">
-                        <img src="{% static 'images/photos/5.jpg' %}" width="150">
-                        <img src="{% static 'images/photos/6.jpg' %}" width="150">
-                    </div>
-                      <button class="next">Вперед</button>
-                </div>
-                <script src='{% static 'scripts/script.js' %}'></script>
-                    <div class="card-button">
-                        <a class="btn" href="crew.html">Наш состав</a>
-                </div>
+        <div class="slider">
+        <!-- Контейнер, который содержит все слайды -->
+        <div class="slides">
+            <div class="slide"><img src="{% static 'images/photos/1.jpg' %}"></div>
+            <div class="slide"><img src="{% static 'images/photos/2.jpg' %}"></div>
+            <div class="slide"><img src="{% static 'images/photos/3.jpg' %}"></div>
+            <div class="slide"><img src="{% static 'images/photos/4.jpg' %}"></div>
+            <div class="slide"><img src="{% static 'images/photos/5.jpg' %}"></div>
+            <div class="slide"><img src="{% static 'images/photos/6.jpg' %}"></div>
+            <div class="slide"><img src="{% static 'images/photos/7.jpg' %}"></div>
+            <div class="slide"><img src="{% static 'images/photos/8.jpg' %}"></div>
+            <div class="slide"><img src="{% static 'images/photos/9.jpg' %}"></div>
+            <div class="slide"><img src="{% static 'images/photos/10.jpg' %}"></div>
+        </div>
+
+        <button class="prev">&#10094;</button> <!-- Кнопка «Назад» -->
+        <button class="next">&#10095;</button> <!-- Кнопка «Вперёд» -->
+    </div>
+</div>
+<script>
+    // Находим контейнер со слайдами
+    const slides = document.querySelector('.slides');
+
+    // Определяем количество слайдов
+    const slideCount = document.querySelectorAll('.slide').length;
+
+    // Находим кнопки «Назад» и «Вперёд»
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+
+    let currentIndex = 0; // Переменная для хранения текущего слайда
+
+    // Функция смены слайдов
+    function goToSlide(index) {
+        if (index < 0) {
+            index = slideCount - 1; // Если нажали «Назад» на первом слайде, переходим на последний
+        } else if (index >= slideCount) {
+            index = 0; // Если нажали «Вперёд» на последнем слайде, переходим на первый
+        }
+
+        currentIndex = index; // Запоминаем текущий слайд
+        slides.style.transform = `translateX(${-index * 100}%)`; // Сдвигаем контейнер со слайдами
+    }
+
+    // Добавляем обработчик клика для кнопки «Назад»
+    prevButton.addEventListener('click', () => {
+        goToSlide(currentIndex - 1);
+    });
+
+    // Добавляем обработчик клика для кнопки «Вперёд»
+    nextButton.addEventListener('click', () => {
+        goToSlide(currentIndex + 1);
+    });
+
+    // Устанавливаем первый активный слайд при загрузке страницы
+    goToSlide(0);
+    </script>
             </div>
 
             <!-- Participate Section -->
@@ -101,13 +190,13 @@
                 </div>
                 <ul class="card-list1">
                     <li class="card-button1">
-                        <a class="btn" href="documentation/1.html">Что мы изучили?</a>
+                        <a class="btn" href="documentation/1.html"><p style="color: #1f2937">Что мы изучили?</p></a>
                     </li>
                     <li class="card-button1">
-                        <a class="btn" href="documentation/2.html">Что сделали?</a>
+                        <a class="btn" href="documentation/2.html"><p style="color: #1f2937">Что сделали?</p></a>
                     </li>
                     <li class="card-button1">
-                        <a class="btn" href="documentation/3.html">Что в процессе?</a>
+                        <a class="btn" href="documentation/3.html"><p style="color: #1f2937">Что в процессе?</p></a>
                     </li>
                     <li class="card-button1">
                         <a class="btn" href="documentation/scaners.html">Сканеры уязвимостей</a>
@@ -118,10 +207,7 @@
             <!-- Skills Section -->
             <div class="content-card">
                 <div class="card-header">
-                    <svg class="card-icon" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                        <path d="M6.5 2H20V22H6.5A2.5 2.5 0 0 1 4 19.5V4.5A2.5 2.5 0 0 1 6.5 2Z"/>
-                    </svg>
+
                     <h2>ПОЛУЧИТЕ НАВЫКИ</h2>
                 </div>
                 <ul class="card-list">
