@@ -125,11 +125,11 @@ body {
 
 .title-card {
     position: absolute;
-    top: 32px;
-    left: 32px;
-    right: 32px;
+    top: 52px;
+    left: 43px;
+    right: 44px;
     background-color: #fbbf24;
-    padding: 24px;
+    padding: 14px;
     border-radius: 8px;
 }
 
