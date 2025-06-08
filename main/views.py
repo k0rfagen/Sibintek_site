@@ -11,3 +11,5 @@ def documentation_page3(request):
     return render(request, 'documentation/3.html')
 def crew(request):
     return render(request, 'crew.html')
+def scaners(request):
+    return render(request, 'documentation/scaners.html')

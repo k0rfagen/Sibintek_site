@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from main.views import index, documentation_page1, documentation_page2, documentation_page3, crew
+from main.views import index, documentation_page1, documentation_page2, documentation_page3, crew, scaners
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -9,4 +9,5 @@ urlpatterns = [
     path('documentation/2.html', documentation_page2, name='page_2'),
     path('documentation/3.html', documentation_page3, name='page_3'),
     path('crew.html', crew, name='crew'),
+    path('documentation/scaners.html', scaners, name='scaners'),
 ]
