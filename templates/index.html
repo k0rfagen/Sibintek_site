@@ -54,6 +54,11 @@
         <div class="content-grid">
             <!-- Study Section -->
             <div class="content-card">
+                <div class="top-right-container">
+                    <div class="card-button">
+                        <a class="btn" href="">Как мы работаем</a>
+                    </div>
+                </div>
                 <div class="card-header">
                     <svg class="card-icon" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M7 17L17 7M17 7H7M17 7V17"/>
@@ -62,17 +67,19 @@
                 </div>
                 <div class="slider">
                       <button class="prev">Назад</button>
-                      <img width=150 src="{% static 'images/photos/1.jpg' %}">
-                      <img width=150 src="{% static 'images/photos/2.jpg' %}">
-                      <img width=150 src="{% static 'images/photos/3.jpg' %}">
-                      <img width=150 src="{% static 'images/photos/4.jpg' %}">
-                      <img width=150 src="{% static 'images/photos/5.jpg' %}">
-                      <img width=150 src="{% static 'images/photos/6.jpg' %}">
+                      <div class="slides">
+                        <img src="{% static 'images/photos/1.jpg' %}" width="150">
+                        <img src="{% static 'images/photos/2.jpg' %}" width="150">
+                        <img src="{% static 'images/photos/3.jpg' %}" width="150">
+                        <img src="{% static 'images/photos/4.jpg' %}" width="150">
+                        <img src="{% static 'images/photos/5.jpg' %}" width="150">
+                        <img src="{% static 'images/photos/6.jpg' %}" width="150">
+                    </div>
                       <button class="next">Вперед</button>
                 </div>
                 <script src='{% static 'scripts/script.js' %}'></script>
-                <div class="card-button">
-                    <a class="btn" href="">Как мы работаем</a>
+                    <div class="card-button">
+                        <a class="btn" href="crew.html">Наш состав</a>
                 </div>
             </div>
 
@@ -84,24 +91,7 @@
                     </svg>
                     <h2>ПОУЧАСТВУЙТЕ В</h2>
                 </div>
-                <ul class="card-list">
-                    <li class="list-item">
-                        <span class="bullet"></span>
-                        <span>Апробировании восстановления ОС разных версий.</span>
-                    </li>
-                    <li class="list-item">
-                        <span class="bullet"></span>
-                        <span>Формировании перечня проверок, возможных с использованием виртуальных образов</span>
-                    </li>
-                    <li class="list-item">
-                        <span class="bullet"></span>
-                        <span>Подборе инструментов для реализации перечня проверок.</span>
-                    </li>
-                    <li class="list-item">
-                        <span class="bullet"></span>
-                        <span>Применении на восстановленных виртуальных образах инструментов.</span>
-                    </li>
-                </ul>
+                <img src="static/images/plan.jpg" width="500" class="shifted-img">
             </div>
 
             <!-- Results Section -->
