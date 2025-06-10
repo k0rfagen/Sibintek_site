@@ -24,3 +24,12 @@ def crew(request):
 
 def scaners(request):
     return render(request, "documentation/scaners.html")
+
+def lab(request):
+    return render(request, "documentation/lab.html")
+
+def alg(request):
+    return render(request, "documentation/alg.html")
+
+def video(request):
+    return render(request, "video.html")

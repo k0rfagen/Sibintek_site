@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -13,25 +12,21 @@
             overflow: hidden; /* Обрезаем всё, что выходит за границы контейнера */
             position: relative; /* Необходимо для правильного позиционирования кнопок */
         }
-
         /* Контейнер всех слайдов */
         .slides {
             display: flex; /* Размещаем слайды в одну линию */
             transition: transform 0.5s ease-in-out; /* Анимация плавного смещения */
         }
-
         /* Каждый отдельный слайд */
         .slide {
             width: 100%; /* Занимает всю ширину контейнера */
             flex-shrink: 0; /* Запрещаем уменьшение размера слайдов */
         }
-
         /* Стили для изображений */
         .slide img {
             width: 100%; /* Картинки растягиваются на весь слайд */
             display: block; /* Убираем пробелы вокруг изображений */
         }
-
         /* Кнопки «Назад» и «Вперёд» */
         .prev, .next {
             position: absolute; /* Позволяет располагать кнопки поверх слайдов */
@@ -46,11 +41,9 @@
             font-weight: bold; /* Делаем текст жирным */
             z-index: 2; /* Размещаем кнопки выше всех элементов */
         }
-
         .prev {
             left: 10px;
         }
-
         .next {
             right: 10px;
         }
@@ -61,12 +54,11 @@
         <div class="header-content">
             <div class="logo-section">
                 <div class="logo-box">
-                    <div class="logo-text"><a href="https://www.sibintek.ru/"><img alt='biba' src="{% static 'images/logo.png' %}" width="100"></a></div>
+                    <div class="logo-text"><a href="https://www.sibintek.ru/"><img  alt='biba' src="{% static 'images/logo.png' %}" width="100"></a></div>
                 </div>
-
             </div>
             <div class="mgu-badge">
-                <div class="mgu-text"><a href="https://msu.ru/"><img src="{% static 'images/msu_logo_new-white.jpg' %}" width="100"></a></div>
+                <div class="mgu-text"><a href="https://msu.ru/"><img  src="{% static 'images/msu_logo_new-white.jpg' %}" width="100"></a></div>
             </div>
         </div>
     </header>
@@ -79,7 +71,6 @@
                 <div class="dot-grid">
                 </div>
             </div>
-
             <!-- Right Side - Main Title -->
             <div class="hero-right">
                 <div class="hero-circle">
@@ -96,14 +87,13 @@
                 </div>
             </div>
         </div>
-
         <!-- Content Sections -->
         <div class="content-grid">
             <!-- Study Section -->
             <div class="content-card">
                 <div class="top-right-container">
                     <div class="card-button">
-                        <a class="btn" href="">Как мы работаем</a>
+                        <a class="btn" href="video.html">Как мы работаем</a>
                     </div>
                 </div>
                 <div class="card-header">
@@ -113,76 +103,49 @@
                     <h2></h2>
                 </div>
                 <div class="slider">
-        <div class="slider">
-        <!-- Контейнер, который содержит все слайды -->
-        <div class="slides">
-            <div class="slide"><img src="{% static 'images/photos/1.jpg' %}"></div>
-            <div class="slide"><img src="{% static 'images/photos/2.jpg' %}"></div>
-            <div class="slide"><img src="{% static 'images/photos/3.jpg' %}"></div>
-            <div class="slide"><img src="{% static 'images/photos/4.jpg' %}"></div>
-            <div class="slide"><img src="{% static 'images/photos/5.jpg' %}"></div>
-            <div class="slide"><img src="{% static 'images/photos/6.jpg' %}"></div>
-            <div class="slide"><img src="{% static 'images/photos/7.jpg' %}"></div>
-            <div class="slide"><img src="{% static 'images/photos/8.jpg' %}"></div>
-            <div class="slide"><img src="{% static 'images/photos/9.jpg' %}"></div>
-            <div class="slide"><img src="{% static 'images/photos/10.jpg' %}"></div>
-        </div>
-
-        <button class="prev">&#10094;</button> <!-- Кнопка «Назад» -->
-        <button class="next">&#10095;</button> <!-- Кнопка «Вперёд» -->
-    </div>
-</div>
-<script>
-    // Находим контейнер со слайдами
-    const slides = document.querySelector('.slides');
-
-    // Определяем количество слайдов
-    const slideCount = document.querySelectorAll('.slide').length;
-
-    // Находим кнопки «Назад» и «Вперёд»
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-
-    let currentIndex = 0; // Переменная для хранения текущего слайда
-
-    // Функция смены слайдов
-    function goToSlide(index) {
-        if (index < 0) {
-            index = slideCount - 1; // Если нажали «Назад» на первом слайде, переходим на последний
-        } else if (index >= slideCount) {
-            index = 0; // Если нажали «Вперёд» на последнем слайде, переходим на первый
-        }
-
-        currentIndex = index; // Запоминаем текущий слайд
-        slides.style.transform = `translateX(${-index * 100}%)`; // Сдвигаем контейнер со слайдами
-    }
-
-    // Добавляем обработчик клика для кнопки «Назад»
-    prevButton.addEventListener('click', () => {
-        goToSlide(currentIndex - 1);
-    });
-
-    // Добавляем обработчик клика для кнопки «Вперёд»
-    nextButton.addEventListener('click', () => {
-        goToSlide(currentIndex + 1);
-    });
-
-    // Устанавливаем первый активный слайд при загрузке страницы
-    goToSlide(0);
-    </script>
+                    <div class="slides">
+                        <div class="slide"><img src="{% static 'images/photos/1.jpg' %}"></div>
+                        <div class="slide"><img src="{% static 'images/photos/2.jpg' %}"></div>
+                        <div class="slide"><img src="{% static 'images/photos/3.jpg' %}"></div>
+                        <div class="slide"><img src="{% static 'images/photos/4.jpg' %}"></div>
+                        <div class="slide"><img src="{% static 'images/photos/5.jpg' %}"></div>
+                        <div class="slide"><img src="{% static 'images/photos/6.jpg' %}"></div>
+                        <div class="slide"><img src="{% static 'images/photos/7.jpg' %}"></div>
+                        <div class="slide"><img src="{% static 'images/photos/8.jpg' %}"></div>
+                        <div class="slide"><img src="{% static 'images/photos/9.jpg' %}"></div>
+                        <div class="slide"><img src="{% static 'images/photos/10.jpg' %}"></div>
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
             </div>
-
             <!-- Participate Section -->
             <div class="content-card">
                 <div class="card-header">
                     <svg class="card-icon" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M7 17L17 7M17 7H7M17 7V17"/>
                     </svg>
-                    <h2>ПОУЧАСТВУЙТЕ В</h2>
+                    <h2>Участники проекта</h2>
                 </div>
-                <img src="static/images/plan.jpg" width="500" class="shifted-img">
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide"><img src="{% static 'images/people/1.png' %}"></div>
+                        <div class="slide"><img src="{% static 'images/people/12.png' %}"></div>
+                        <div class="slide"><img src="{% static 'images/people/3.png' %}"></div>
+                        <div class="slide"><img src="{% static 'images/people/4.png' %}"></div>
+                        <div class="slide"><img src="{% static 'images/people/5.png' %}"></div>
+                        <div class="slide"><img src="{% static 'images/people/6.png' %}"></div>
+                        <div class="slide"><img src="{% static 'images/people/7.png' %}"></div>
+                        <div class="slide"><img src="{% static 'images/people/8.png' %}"></div>
+                        <div class="slide"><img src="{% static 'images/people/9.png' %}"></div>
+                        <div class="slide"><img src="{% static 'images/people/10.png' %}"></div>
+                        <div class="slide"><img src="{% static 'images/people/11.png' %}"></div>
+                        <div class="slide"><img src="{% static 'images/people/13.jpg' %}"></div>
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
             </div>
-
             <!-- Results Section -->
             <div class="content-card">
                 <div class="card-header">
@@ -199,47 +162,26 @@
                         <a class="btn" href="documentation/3.html"><p style="color: #1f2937">Что в процессе?</p></a>
                     </li>
                     <li class="card-button1">
-                        <a class="btn" href="{% static 'images/scaners.pdf' %}">Сканеры уязвимостей</a>
+                        <a class="btn" href="documentation/lab.html"><p style="color: #1f2937">Схема виртуальной лаборатории</p></a>
+                    </li>
+                    <li class="card-button1">
+                        <a class="btn" href="documentation/alg.html"><p style="color: #1f2937">Алгоритм анализа уязвимостей</p></a>
                     </li>
                 </ul>  
             </div>
-
             <!-- Skills Section -->
             <div class="content-card">
                 <div class="card-header">
-
-                    <h2>ПОЛУЧИТЕ НАВЫКИ</h2>
+                    <h2>Некоторые примеры, как мы работали с конкретными системами и приложениями</h2>
                 </div>
                 <ul class="card-list">
-                    <li class="list-item">
-                        <span class="bullet"></span>
-                        <span>Основы информационной безопасности</span>
-                    </li>
-                    <li class="list-item">
-                        <span class="bullet"></span>
-                        <span>Проведение резервного копирования.</span>
-                    </li>
-                    <li class="list-item">
-                        <span class="bullet"></span>
-                        <span>Понимание технологий виртуализации.</span>
-                    </li>
-                    <li class="list-item">
-                        <span class="bullet"></span>
-                        <span>Проведение анализа уязвимостей.</span>
-                    </li>
-                    <li class="list-item">
-                        <span class="bullet"></span>
-                        <span>Проведение активного тестирования защищённости</span>
-                    </li>
-                    <li class="list-item">
-                        <span class="bullet"></span>
-                        <span>Формирование методик и отчётности по информационной безопасности.</span>
+                    <li class="card-button1">
+                        <a class="btn" href="{% static 'images/scaners.pdf' %}">Сканеры уязвимостей</a>
                     </li>
                 </ul>
             </div>
         </div>
     </main>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -270,5 +212,31 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Функция инициализации слайдера
+        function initSlider(sliderElement) {
+            const slides = sliderElement.querySelector('.slides');
+            const slideCount = slides.querySelectorAll('.slide').length;
+            const prevButton = sliderElement.querySelector('.prev');
+            const nextButton = sliderElement.querySelector('.next');
+            let currentIndex = 0;
+
+            function goToSlide(index) {
+                if (index < 0) index = slideCount - 1;
+                else if (index >= slideCount) index = 0;
+                currentIndex = index;
+                slides.style.transform = `translateX(${-index * 100}%)`;
+            }
+
+            prevButton.addEventListener('click', () => goToSlide(currentIndex - 1));
+            nextButton.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+            goToSlide(0);
+        }
+
+        // Инициализируем все слайдеры
+        document.querySelectorAll('.slider').forEach(initSlider);
+    </script>
 </body>
 </html>

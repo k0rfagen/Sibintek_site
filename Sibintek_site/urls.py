@@ -6,7 +6,11 @@ from main.views import (
     documentation_page2,
     documentation_page3,
     crew,
-    scaners,  # взято из локальной версии (HEAD)
+    scaners,
+    lab,
+    alg, 
+    video,
+     # взято из локальной версии (HEAD)
 )
 
 urlpatterns = [
@@ -17,4 +21,7 @@ urlpatterns = [
     path("documentation/3.html", documentation_page3, name="page_3"),
     path("crew.html", crew, name="crew"),
     path("documentation/scaners.html", scaners, name="scaners"),
+    path("documentation/lab.html", lab, name="lab"),
+    path("documentation/alg.html", alg, name="alg"),
+    path("video.html", video, name="video"),
 ]

@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Схема проекта</title>
+  <style>
+    /* Обнуление отступов */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .container {
+      max-width: 95vw;
+      max-height: 95vh;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      background-color: #fff;
+      padding: 10px;
+      transition: all 0.3s ease;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+
+    /* Лёгкая анимация при наведении */
+    .container:hover {
+      transform: scale(1.01);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="{% static 'images/lab.png' %}" width="500" class="shifted-img">
+  </div>
+</body>
+</html>

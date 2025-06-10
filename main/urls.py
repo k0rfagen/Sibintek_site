@@ -15,7 +15,9 @@ urlpatterns = [
     path('2.html', views.documentation_page2, name='page_2'),
     path('3.html', views.documentation_page3, name='page_3'),
     path('crew.html', views.crew, name='crew'),
-    path('scaners.html', views.scaners, name='scaners'),
+    path('lab.html', views.lab, name='lab'),
+    path('alg.html', views.alg, name='alg'),
+    path('video.html', views.video, name='video'),
 
     # Маршруты из удалённой версии (чистые URL)
     path("doc1", views.documentation_page1, name="doc_page1"),
