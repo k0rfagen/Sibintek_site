@@ -29,7 +29,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'ascertain.ru:5000'
+    'http://ascertain.ru:5000/'
 ]
 
 
