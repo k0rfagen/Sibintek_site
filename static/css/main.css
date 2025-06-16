@@ -343,10 +343,38 @@ body {
     margin-bottom: 0 !important;
 }
 
+/* Общие стили для логотипов */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+.header-logo {
+    height: auto;
+    max-width: 100px; /* Размер по умолчанию для десктопа */
+}
 
+@media (max-width: 767px) {
+  .logo-container {
+    display: flex;          /* Гибкое расположение */
+    flex-direction: row;    /* Элементы в строку */
+    align-items: center;    /* Выравнивание по центру */
+    gap: 10px;              /* Отступ между логотипами */
+    overflow-x: auto;       /* Горизонтальный скролл, если не влезают */
+    white-space: nowrap;    /* Запрет переноса на новую строку */
+  }
 
-
+  /* Если логотипы были блочными, делаем их inline */
+  .logo-container img,
+  .logo-container a {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
 /*pipka*/
 .slider {
     width: 300px; /* Фиксированная ширина слайдера */
